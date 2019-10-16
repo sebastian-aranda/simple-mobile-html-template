@@ -1,0 +1,60 @@
+<!DOCTYPE html> 
+<html> 
+	<head>
+	<meta charset="UTF-8"> 
+	<title>Simple Mobile HTML Template</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="js/swht.js"></script>
+	<link href="css/swht.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head> 
+<body> 
+
+<div class="page-container">
+	<button type="button" class="btn btn-light" style="position: fixed;top: 16px;left: 16px;z-index: 999;" onclick="swht.goBack()">Go Back</button>
+	<div data-role="page" id="splashscreen">
+		
+	</div>
+
+	<div data-role="page" id="login">
+		<div data-role="header">
+			<h1>Login</h1>
+		</div>
+		<div data-role="content">	
+			<input type="text" class="form-control" id="loginInput-rut" placeholder="Rut">
+			<input type="password" class="form-control" id="loginInput-password" placeholder="Contraseña">
+			<button type="button" class="btn btn-primary" onclick="swht.goTo('home', 'sr')">Ingresar</button>
+		</div>
+	</div>
+
+	<div data-role="page" id="home">
+		<div data-role="header">
+			<h1>Home</h1>
+		</div>
+		<div data-role="content">	
+			<p>Hello world</p>
+			<a href="#contact" data-role="button" data-transition="sr">Go to contact</a>
+		</div>
+	</div>
+
+	<div data-role="page" id="contact">
+		<div data-role="header">
+			<h1>Contact</h1>
+		</div>
+
+		<div data-role="content">	
+			<p>Hello world - Contact</p>
+			<a href="#home" data-role="button" data-transition="sr">Go to home</a>
+		</div>
+	</div>
+</div>
+
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+<script>
+	$(function() {
+        swht.initialize();
+    });
+</script>
+</body>
+</html>
