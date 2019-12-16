@@ -28,9 +28,19 @@ div[data-role="page"]{
 	justify-content:center;
 	align-items:center;
 	flex-direction: column;
+	padding: 16px;
 }
 
 div#splashscreen[data-role="page"]{
+	z-index: 500;
+	background-image: url(../img/splashscreen_bg.png);
+	background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+div#login[data-role="page"]{
 	z-index: 500;
 	background-image: url(../img/splashscreen_bg.png);
 	background-repeat: no-repeat;
